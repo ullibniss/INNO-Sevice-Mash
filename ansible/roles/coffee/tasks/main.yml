@@ -1,0 +1,2 @@
+---
+- include_tasks: "{{ coffee_task }}.yml"

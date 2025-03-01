@@ -1,0 +1,6 @@
+syrup_deploy_dir: "{{ deploy_dir }}/syrup"
+syrup_build_dir: "{{ syrup_deploy_dir }}/syrup-service"
+
+syrup_repo_url: https://github.com/ullibniss/INNO-Sevice-Mash.git
+
+syrup_tag: "322.1337.14"

@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  cappuccino-drink:
+    image: drink:{{ drink_tag }}
+    environment:
+      - PORT=80
+      - DRINK_TYPE=cappuccino
+    ports:
+    - 3001:80
+
+  latte-drink:
+    image: drink:{{ drink_tag }}
+    environment:
+      - PORT=80
+      - DRINK_TYPE=latte
+    ports:
+    - 3002:80

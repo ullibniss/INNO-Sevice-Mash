@@ -1,0 +1,6 @@
+milk_deploy_dir: "{{ deploy_dir }}/milk"
+milk_build_dir: "{{ milk_deploy_dir }}/milk-service"
+
+milk_repo_url: https://github.com/ullibniss/INNO-Sevice-Mash.git
+
+milk_tag: "322.1337.14"

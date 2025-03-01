@@ -1,0 +1,5 @@
+---
+- name: Build milk service
+  command: docker build -t milk:{{ milk_tag }} .
+  args:
+    chdir: "{{ milk_build_dir }}"

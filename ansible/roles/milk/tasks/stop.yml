@@ -1,0 +1,12 @@
+---
+- name: Stop milk
+  command:
+    argv:
+      - "docker"
+      - "compose"
+      - "-f"
+      - "{{ milk_deploy_dir }}/docker-compose.yml"
+      - "-p"
+      - "milk"
+      - "down"
+  become: true

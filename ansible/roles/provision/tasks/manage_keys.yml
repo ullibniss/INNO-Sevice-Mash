@@ -1,0 +1,35 @@
+- name: Create .ssh directory is not exists
+  file:
+    path: "{{ provision_ssh_dir }}"
+    state: directory
+    mode: 0755
+    owner: "{{ default_user }}"
+    group: "{{ default_user }}"
+  become: true
+
+- name: Copy authorized_keys to .ssh directory
+  template:
+    src: authorized_keys
+    dest: "{{ provision_ssh_dir }}/authorized_keys"
+    group: "{{ default_user }}"
+    owner: "{{ default_user }}"
+    mode: 0600
+  become: true
+
+- name: Update SSH configuration
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    state: present
+    regexp: '^#?{{ item.key }}'
+    line: '{{ item.key }} {{ item.value }}'
+  loop:
+    - { key: 'ChallengeResponseAuthentication', value: 'no' }
+    - { key: 'PasswordAuthentication', value: 'no' }
+    - { key: 'UsePAM', value: 'no' }
+    - { key: 'PermitRootLogin', value: 'no' }
+    - { key: 'PubkeyAuthentication', value: 'yes' }
+  become: true
+
+- name: Restart SSH
+  command: systemctl restart sshd
+  become: true

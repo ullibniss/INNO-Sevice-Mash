@@ -1,0 +1,12 @@
+---
+- name: Stop coffee
+  command:
+    argv:
+      - "docker"
+      - "compose"
+      - "-f"
+      - "{{ coffee_deploy_dir }}/docker-compose.yml"
+      - "-p"
+      - "coffee"
+      - "down"
+  become: true

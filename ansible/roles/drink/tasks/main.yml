@@ -1,0 +1,2 @@
+---
+- include_tasks: "{{ drink_task }}.yml"

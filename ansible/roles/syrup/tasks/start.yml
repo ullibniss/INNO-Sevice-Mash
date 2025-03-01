@@ -1,0 +1,15 @@
+---
+- name: Start syrup-service
+  command:
+    argv:
+      - "docker"
+      - "compose"
+      - "-f"
+      - "{{ syrup_deploy_dir }}/docker-compose.yml"
+      - "-p"
+      - "syrup"
+      - "up"
+      - "-d"
+      - "--no-build"
+      - "--force-recreate"
+  become: true

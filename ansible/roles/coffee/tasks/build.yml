@@ -1,0 +1,10 @@
+---
+- name: Build coffee service
+  command: docker build -t coffee:{{ coffee_tag }} .
+  args:
+    chdir: "{{ coffee_build_dir }}"
+
+- name: Build sidecar lb service
+  command: docker build -t sidecar-lb:{{ coffee_tag }} .
+  args:
+    chdir: "{{ sidecar_build_dir }}"

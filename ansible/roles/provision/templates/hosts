@@ -1,0 +1,3 @@
+{% for host in provision_hosts %}
+{{ host.ip}} {{ host.hostname }}
+{% endfor %}

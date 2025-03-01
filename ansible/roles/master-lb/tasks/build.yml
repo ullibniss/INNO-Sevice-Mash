@@ -1,0 +1,5 @@
+---
+- name: Build master-lb service
+  command: docker build -t master-lb:{{ master_lb_tag }} .
+  args:
+    chdir: "{{ master_lb_build_dir }}"

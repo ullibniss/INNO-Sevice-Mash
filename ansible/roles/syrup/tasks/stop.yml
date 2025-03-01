@@ -1,0 +1,12 @@
+---
+- name: Stop syrup
+  command:
+    argv:
+      - "docker"
+      - "compose"
+      - "-f"
+      - "{{ syrup_deploy_dir }}/docker-compose.yml"
+      - "-p"
+      - "syrup"
+      - "down"
+  become: true

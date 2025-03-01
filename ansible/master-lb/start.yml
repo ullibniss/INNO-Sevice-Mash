@@ -1,0 +1,8 @@
+---
+- hosts: [master-lb]
+  tasks:
+    - name: Start master-lb service
+      ansible.builtin.import_role:
+        name: master-lb
+      vars:
+        master_lb_task: start

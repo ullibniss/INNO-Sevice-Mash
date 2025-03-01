@@ -1,0 +1,8 @@
+---
+- hosts: [coffee]
+  tasks:
+    - name: Build coffee service
+      ansible.builtin.import_role:
+        name: coffee
+      vars:
+        coffee_task: build

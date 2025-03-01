@@ -1,0 +1,8 @@
+---
+- hosts: [syrup]
+  tasks:
+    - name: Stop syrup service
+      ansible.builtin.import_role:
+        name: syrup
+      vars:
+        syrup_task: stop

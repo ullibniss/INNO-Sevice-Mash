@@ -1,3 +1,3 @@
 port: 8081
 alias: sidecar-001
-master_url: http://127.0.0.1:8080
+master_url: http://192.168.7.100:9000

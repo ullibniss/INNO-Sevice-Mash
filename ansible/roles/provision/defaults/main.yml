@@ -1,0 +1,13 @@
+provision_ssh_dir: "/home/{{ default_user }}/.ssh"
+
+provision_hosts:
+  - hostname: master-lb
+    ip: 192.168.7.100
+  - hostname: coffee
+    ip: 192.168.7.101
+  - hostname: drink
+    ip: 192.168.7.102
+  - hostname: milk
+    ip: 192.168.7.103
+  - hostname: syrup
+    ip: 192.168.0.104

@@ -1,0 +1,4 @@
+---
+- include_tasks: "manage_packages.yml"
+- include_tasks: "manage_keys.yml"
+- include_tasks: "manage_network.yml"

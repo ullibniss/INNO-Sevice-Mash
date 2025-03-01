@@ -1,0 +1,8 @@
+---
+- hosts: [milk]
+  tasks:
+    - name: Build milk service
+      ansible.builtin.import_role:
+        name: milk
+      vars:
+        milk_task: build

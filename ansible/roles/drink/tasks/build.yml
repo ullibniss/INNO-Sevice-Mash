@@ -1,0 +1,5 @@
+---
+- name: Build drink service
+  command: docker build -t drink:{{drink_tag }} .
+  args:
+    chdir: "{{ drink_build_dir }}"

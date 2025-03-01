@@ -1,0 +1,2 @@
+default_user: fedorov
+deploy_dir: "/home/{{ default_user }}/deployments" 
