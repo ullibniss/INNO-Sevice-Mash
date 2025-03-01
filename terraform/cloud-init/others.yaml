@@ -1,0 +1,19 @@
+#cloud-config
+hostname: ${ hostname}
+
+package_update: true
+packages:
+  - git
+  - htop
+  - python3
+  - pip
+  - vim
+
+ssh_pwauth: true
+
+users:
+  - name: fedorov
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    lock_passwd: false
+    plain_text_passwd: ${ ssh_pass }
