@@ -8,3 +8,6 @@
   command: docker build -t sidecar-lb:{{ coffee_tag }} .
   args:
     chdir: "{{ sidecar_build_dir }}"
+  environment:
+  - GOPROXY: https://goproxy.cn
+  - GO111MODULE: on

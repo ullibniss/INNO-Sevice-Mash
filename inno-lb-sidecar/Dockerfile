@@ -1,5 +1,9 @@
 FROM golang:1.22.4-bullseye as builder
 
+ARG GO111MODULE=on
+
+ARG GOPROXY=https://goproxy.cn
+
 RUN mkdir /inno-lb-sidecar
 
 WORKDIR /inno-lb-sidecar
