@@ -1,0 +1,26 @@
+port: 80
+groups:
+  - alias: milk
+    endpoints:
+    - url: http://original-milk
+      weight: 3
+    - url: http://almond-milk
+      weight: 1
+    - url: http://coconut-milk
+      weight: 2
+  - alias: drink
+    endpoints:
+    - url: http://cappuccino-drink
+      weight: 1
+    - url: http://latte-drink
+      weight: 1
+  - alias: syrup
+    endpoints:
+    - url: http://maple-syrup
+      weight: 4
+    - url: http://strawberry-syrup
+      weight: 2
+    - url: http://vanilla-syrup
+      weight: 2
+    - url: http://banana-syrup
+      weight: 2

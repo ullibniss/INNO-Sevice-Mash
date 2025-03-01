@@ -1,0 +1,21 @@
+version: "3.5"
+
+services:
+  cappuccino-drink:
+    image: drink-service:latest
+    environment:
+      - PORT=80
+      - DRINK_TYPE=cappuccino
+    networks:
+      - lb-net
+  latte-drink:
+    image: drink-service:latest
+    environment:
+      - PORT=80
+      - DRINK_TYPE=latte
+    networks:
+      - lb-net
+
+networks:
+  lb-net:
+    external: true

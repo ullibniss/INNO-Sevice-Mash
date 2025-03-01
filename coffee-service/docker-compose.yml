@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+  coffee:
+    image: coffee-service:latest
+    networks:
+    - lb-net
+    ports:
+      - 3000:80
+    environment:
+      - PORT=80
+      - SIDECAR_URL=http://lb-sidecar
+
+  lb-sidecar:
+    image: inno-lb-sidecar:latest
+    networks:
+    - lb-net
+    environment:
+      - MASTER_URL=http://lb-master
+      - PORT=80
+      - ALIAS=coffee-sidecar
+
+
+networks:
+  lb-net:
+    external: true

@@ -1,0 +1,28 @@
+version: "3.5"
+
+services:
+  original-milk:
+    image: milk-service:latest
+    environment:
+      - PORT=80
+      - MILK_TYPE=original
+    networks:
+      - lb-net
+  almond-milk:
+    image: milk-service:latest
+    environment:
+      - PORT=80
+      - MILK_TYPE=almond
+    networks:
+      - lb-net
+  coconut-milk:
+    image: milk-service:latest
+    environment:
+      - PORT=80
+      - MILK_TYPE=coconut
+    networks:
+      - lb-net
+
+networks:
+  lb-net:
+    external: true

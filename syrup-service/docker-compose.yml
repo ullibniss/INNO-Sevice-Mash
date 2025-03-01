@@ -1,0 +1,36 @@
+version: "3.5"
+
+services:
+  maple-syrup:
+    image: syrup-service:latest
+    environment:
+      - PORT=80
+      - SYRUP_TYPE=maple
+    networks:
+      - lb-net
+  strawberry-syrup:
+    image: syrup-service:latest
+    environment:
+      - PORT=80
+      - SYRUP_TYPE=strawberry
+    networks:
+      - lb-net
+  vanilla-syrup:
+    image: syrup-service:latest
+    environment:
+      - PORT=80
+      - SYRUP_TYPE=vanilla
+    networks:
+      - lb-net
+  banana-syrup:
+    image: syrup-service:latest
+    environment:
+      - PORT=80
+      - SYRUP_TYPE=banana
+    networks:
+      - lb-net
+
+
+networks:
+  lb-net:
+    external: true

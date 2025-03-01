@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  lb-master:
+    image: inno-lb-master:latest
+    networks:
+    - lb-net
+    environment:
+      - CONFIG_PATH=/app/config/config.yml
+    volumes:
+      - "./config.yml:/app/config/config.yml"
+
+networks:
+  lb-net:
+    external: true
