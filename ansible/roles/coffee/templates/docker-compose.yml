@@ -3,8 +3,6 @@ version: "3.5"
 services:
   coffee:
     image: coffee:{{ coffee_tag }}
-    networks:
-    - coffee-net
     ports:
       - 80:80
     environment:
@@ -13,14 +11,8 @@ services:
 
   lb-sidecar:
     image: sidecar-lb:{{ coffee_tag }}
-    networks:
-    - coffee-net
     environment:
       - MASTER_URL=http://192.168.7.100:9000
       - PORT=80
       - ALIAS=coffee-sidecar
 
-
-networks:
-  coffee-net:
-    adapter: bridge
