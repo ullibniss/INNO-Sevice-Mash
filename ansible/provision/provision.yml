@@ -1,8 +1,0 @@
----
-- hosts: [provision]
-  tasks:
-    - name: Do server provision
-      ansible.builtin.import_role:
-        name: provision
-      vars:
-        provision_action: provision

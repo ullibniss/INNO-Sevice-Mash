@@ -1,6 +1,0 @@
-master_lb_deploy_dir: "{{ deploy_dir }}/master_lb"
-master_lb_build_dir: "{{ master_lb_deploy_dir }}/inno-lb-master"
-
-master_lb_repo_url: https://github.com/ullibniss/INNO-Sevice-Mash.git
-
-master_lb_tag: "322.1337.14"

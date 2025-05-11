@@ -1,5 +1,0 @@
----
-- name: Build coffee service
-  command: docker build -t coffee:{{ coffee_tag }} .
-  args:
-    chdir: "{{ coffee_build_dir }}"

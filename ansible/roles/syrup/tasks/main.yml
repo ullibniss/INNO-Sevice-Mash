@@ -1,2 +1,0 @@
----
-- include_tasks: "{{ syrup_task }}.yml"

@@ -1,8 +1,0 @@
----
-- hosts: [coffee]
-  tasks:
-    - name: Stop coffee service
-      ansible.builtin.import_role:
-        name: coffee
-      vars:
-        coffee_task: stop

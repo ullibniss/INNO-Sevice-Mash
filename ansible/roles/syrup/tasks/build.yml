@@ -1,5 +1,0 @@
----
-- name: Build syrup service
-  command: docker build -t syrup:{{ syrup_tag }} .
-  args:
-    chdir: "{{ syrup_build_dir }}"

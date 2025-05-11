@@ -1,8 +1,0 @@
----
-- hosts: [drink]
-  tasks:
-    - name: Start drink service
-      ansible.builtin.import_role:
-        name: drink
-      vars:
-        drink_task: start

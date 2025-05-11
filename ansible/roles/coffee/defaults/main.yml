@@ -1,8 +1,0 @@
-
-coffee_deploy_dir: "{{ deploy_dir }}/coffee"
-coffee_build_dir: "{{ coffee_deploy_dir }}/coffee-service"
-sidecar_build_dir: "{{ coffee_deploy_dir }}/inno-lb-sidecar"
-
-coffee_repo_url: https://github.com/ullibniss/INNO-Sevice-Mash.git
-
-coffee_tag: "322.1337.14"

@@ -1,6 +1,0 @@
-drink_deploy_dir: "{{ deploy_dir }}/drink"
-drink_build_dir: "{{ drink_deploy_dir }}/drink-service"
-
-drink_repo_url: https://github.com/ullibniss/INNO-Sevice-Mash.git
-
-drink_tag: "322.1337.14"
